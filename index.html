@@ -97,6 +97,7 @@ body {
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
+  }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -104,6 +105,7 @@ body {
   .navbar a {
     float: none;
     width: 100%;
+  }
 }
 
 .button {
@@ -167,11 +169,19 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+th, td {
+  
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: pink;
+}
 .zoom:hover {
   -ms-transform: scale(1.2); /* IE 9 */
   -webkit-transform: scale(1.2); /* Safari 2-7 */
-  transform: scale(1.2); 
- 
+  transform: scale(1.2);
 }
 </style>
 </head>
