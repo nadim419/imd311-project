@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>My Profile/Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 20px;
+  text-align: center ;
+  background: pink;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: maroon;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: pink;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #FAD7A0;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #008CBA;} /* Blue */
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 19px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+th, td {
+  
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: pink;
+}
+.zoom:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 2-7 */
+  transform: scale(1.2);
+}
+ 
+</style>
+</head>
+
+<body bgcolor="white">
+
+
+<div class="header">
+
+<div align="right">
+<span id="digitalclock" class="styling" ></span>
+
+<script>
+<!--
+
+/*****************************************
+* LCD Clock script- by Javascriptkit.com
+* Featured on/available at http://www.dynamicdrive.com/
+* This notice must stay intact for use
+*****************************************/
+
+var alternate=0
+
+function show(){
+var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var dn="AM"
+
+if (hours==12) dn="PM" 
+if (hours>12){
+dn="PM"
+hours=hours-12
+}
+if (hours==0) hours=12
+if (hours.toString().length==1)
+hours="0"+hours
+if (minutes<=9)
+minutes="0"+minutes
+
+if (alternate==0)
+clockobj.innerHTML=hours+"<font color='lime'> : </font>"+minutes+" "+"<sup>"+dn+"</sup>"
+else
+clockobj.innerHTML=hours+"<font color='black'> : </font>"+minutes+" "+"<sup>"+dn+"</sup>"
+alternate=(alternate==0)? 1 : 0
+setTimeout("show()",1000)
+}
+window.onload=show
+
+//-->
+</script>
+</div>
+  <p align="center"><img src="image/banner.png" width="70%" height="190" abbr title="MAHATMA GHANDI"></p>
+</div>
+
+
+
+<div class="navbar">
+  <a href="home.html">HOME</a>
+  <a href="Biodata.html">BIODATA</a>
+  <a href="experience.html">EXPERIENCE</a>	
+  <a href="Education.html">EDUCATION</a>
+  <a href="Family.html">FAMILY</a>
+  <a href="Gallery.html">GALLERY</a>
+
+</div>
+
+<br>
+
+<div>
+<table align="center">
+
+
+<tr>
+		<td align="right"><img src="image/nadim1.png" alt="PEACE" width="250" border="5" vspace="5" hspace="5">	</td>
+		<td>
+
+
+<div align="center"><font face ="Haettenschweiler"><font size=15>
+<img src="image/button.png" border="0" height="50" width="100" onclick="typeWriter()" class="zoom" abbr title="Click Me">
+<p id="demo"></p>
+</div></font></font>
+
+
+<script>
+var i = 0;
+var txt = 'Assalamualaikum, my name is Ahmad Nadim Najmi bin Faizal. I am from Kedah. Right now, i am studying in UITM Kedah for last semester in my diploma. This is my first time doing a website using the coding and i feel so great that i can learn it.';
+var speed = 65;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script></td>
+</tr>
+
+
+</table>
+</div>
+
+<p align="left">
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/774613/t/0"></script></p>
+
+
+
+<table align="center">
+<div class="footer" bgcolor="maroon">
+  <a href="https://www.facebook.com/mad.nadim" target="_blank"><img src="image/fb.png" border="0" height="100" width="100"  class="zoom" abbr title="facebook" ></a>
+  <a href="https://www.instagram.com/ahmdnadim_/" target="_blank"><img src="image/ig.png" border="0" height="100" width="100"  class="zoom" abbr title="instagram" ></a>
+  <a href="https://twitter.com/nadimnajmie" target="_blank"><img src="image/twt.png" border="0" height="100" width="100"  class="zoom" abbr title="twitter" ></a>
+  <a href="https://www.youtube.com/channel/UCNZQH8a_UugofdUfODfO2rA" target="_blank"><img src="image/yt.png" border="0" height="90" width="90"  class="zoom" abbr title="youtube" ></a>
+  <h5>THIS WEBSITE DESIGNED FOR IMD 311</h5>
+  
+
+     
+<div align="center">
+	<a href="index.html"><img src="image/lo.png" border="0" class="zoom" class="zoom" abbr title="LOGOUT"></a>
+</div>
+</div>
+</table>
+
+</body> 
+</html>
+
+
+
