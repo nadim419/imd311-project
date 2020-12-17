@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>MY PROFILE</title>
+<meta name="viewport" content="width=device-width, initial-scale=5">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  high: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 95%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: maroon;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: pink;} /* Green */
+.button2 {background-color: #4d1f00;} /* Blue */
+</style>
+</head>
+<body>
+<br>
+
+<embed src="audio/fas.mp3" hidden="true"></embed>
+
+<div class="container">
+<div  align="center">
+  <img src="image/sun.jpg" alt="Avatar" class="image" style="width:100%">
+</div>
+<div class="middle">
+   <div class="text">
+   <h1><b><font style="font-family:consolas;">AHMAD NADIM NAJMI BIN FAIZAL</font><b></h1>
+	<p>PEACETEACHME</p>
+  
+	<legend><b>WHO ARE YOU ?!<b></legend>
+<BR>
+	<button class="button button1" value="ADMIN/WORKER" align="center"><a href="index.html"><font color="#619196">WANT TO KNOW ABOUT ME</a></button>
+
+	</div> 
+</div>
+</div>
+  
+</body>
+</html>
